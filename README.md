@@ -17,12 +17,6 @@ This library provides a complete set of functions to interact with the chip, inc
 * `examples/` - Practical, real-world implementation examples.
   * `LPC1768_Audio_Player/main.c` - A complete application showcasing how to use this library to stream audio data from Flash to a DAC using an NXP LPC1768 microcontroller and an ILI9325 LCD touch screen.
 
-## 🛠️ Porting & Integration
-
-To use this library, you must provide implementations for three hardware-specific functions: `SPI_Transfer`, `SPI_CS_Low`, and `SPI_CS_High`. 
-
-For a complete, production-ready example of how to implement these functions and integrate the library into a full embedded application, please check the [LPC1768 Audio Player Example](examples/LPC1768_Audio_Player/main.c).
-
 ## Features
 * **Hardware Independent:** Porting to any microcontroller (STM32, AVR, ESP32, etc.) requires implementing just 3 simple SPI wrapper functions.
 * **Dual Page Size Support:** Automatically detects and supports both Standard DataFlash page size (264 bytes) and "Power of 2" binary page size (256 bytes).
