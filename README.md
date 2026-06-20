@@ -51,6 +51,7 @@ void SPI_CS_High(void) {
 ## Usage Examples
 
 1. **Initialization**
+   
 Initializes the chip and detects its current page size configuration.
 
 ```c
@@ -64,6 +65,7 @@ if (AT45_Init(&flashDev) == AT45_OK) {
 ```
 
 2. **Writing to Main Memory (via SRAM Buffer)**
+   
 Writes an array of data to a specific page using one of the internal buffers.
 
 ```c
@@ -76,6 +78,7 @@ AT45_Status_t status = AT45_WriteMainMemory(targetPage, offsetInPage, myData, si
 ```
 
 3. **Reading from Main Memory**
+   
 Reads data back from the flash memory array.
 
 ```c
@@ -89,6 +92,7 @@ AT45_Status_t status = AT45_ReadMainMemory(targetPage, offsetInPage, readBuffer,
 
 
 4. **Erasing the Chip**
+   
 You can erase specific pages, blocks, or the entire chip.
 
 ```c
@@ -103,6 +107,7 @@ AT45_ChipErase_Safe();
 ```
 
 5. **Configuring Binary Page Size (256 bytes)**
+   
 By default, the chip ships with a 264-byte page size. You can permanently configure it to 256 bytes (Binary Mode).
 **WARNING:** This is a ONE-TIME programmable register. Once configured to 256 bytes, it cannot be reverted to 264 bytes. A power cycle is required after calling this function.
 
